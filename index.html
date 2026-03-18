@@ -15,6 +15,28 @@
 .info-value a { color:#f0e8d8 !important; text-decoration:none; }
 .ref-detail a { color:rgba(200,191,168,.6) !important; text-decoration:none; }
 .ref-detail a:hover { color:#c9a84c !important; }
+
+/* PROJECTS */
+#projects{background:var(--dark2)}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:40px;max-width:900px}
+.project-card{background:var(--dark3);border:1px solid rgba(201,168,76,.15);overflow:hidden;transition:border-color .3s}
+.project-card:hover{border-color:rgba(201,168,76,.4)}
+.project-preview{position:relative;height:320px;overflow:hidden;background:#000;cursor:pointer}
+.project-preview iframe{position:absolute;top:0;left:0}
+.project-overlay{position:absolute;inset:0;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;transition:background .3s}
+.project-overlay:hover{background:rgba(0,0,0,.1)}
+.project-play{background:rgba(201,168,76,.9);color:#000;padding:14px 32px;font-size:14px;font-weight:500;letter-spacing:2px;font-family:'Jost',sans-serif;text-transform:uppercase}
+.project-info{padding:28px 32px}
+.project-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.project-title{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin-bottom:12px}
+.project-desc{font-size:13px;line-height:1.8;color:rgba(200,191,168,.65);margin-bottom:20px}
+.project-links{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.project-btn-primary{padding:10px 24px;background:var(--gold);color:#000;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:'Jost',sans-serif;font-weight:500;transition:background .3s}
+.project-btn-primary:hover{background:var(--gold-light)}
+.project-btn-ghost{padding:10px 24px;border:1px solid rgba(201,168,76,.4);color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:'Jost',sans-serif;transition:all .3s}
+.project-btn-ghost:hover{border-color:var(--gold);background:rgba(201,168,76,.08)}
+.project-stack{display:flex;gap:8px;flex-wrap:wrap}
+.stack-tag{padding:5px 12px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);font-size:11px;color:var(--cream2);letter-spacing:1px}
 </style>
 </head>
 <body>
@@ -26,6 +48,7 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#work">Experience</a></li>
     <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#references">References</a></li>
@@ -50,7 +73,7 @@
     <div class="hero-contacts">
       <div class="hero-contact-item"><span class="hci">📞</span>0992-150-2112</div>
       <div class="hero-contact-item"><span class="hci">🌐</span><a href="https://www.facebook.com/profile.php?id=61584889795384" target="_blank">facebook.com/profile.php?id=61584889795384</a></div>
-      <div class="hero-contact-item"><span class="hci">✉️</span><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank">apocalipsebuscato29@gmail.com</a></div>
+      <div class="hero-contact-item"><span class="hci">✉️</span><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank"><span class="__cf_email__" data-cfemail="2243524d41434e4b5251474057514143564d101b62454f434b4e0c414d4f">[email&#160;protected]</span></a></div>
     </div>
     <div class="hero-btns">
       <a href="#profile" class="btn-gold">View Profile</a>
@@ -86,7 +109,7 @@
         <div class="info-item"><span class="info-label">School</span><span class="info-value">Citi Global College</span></div>
         <div class="info-item"><span class="info-label">Address</span><span class="info-value">Blk 10 Lot 46 Ph. 3, Brgy. Dila<br>Golden City, Sta. Rosa, Laguna 4026</span></div>
         <div class="info-item"><span class="info-label">Contact</span><span class="info-value">0992-150-2112</span></div>
-        <div class="info-item"><span class="info-label">Email</span><span class="info-value"><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank">apocalipsebuscato29@gmail.com</a></span></div>
+        <div class="info-item"><span class="info-label">Email</span><span class="info-value"><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank"><span class="__cf_email__" data-cfemail="86e7f6e9e5e7eaeff6f5e3e4f3f5e5e7f2e9b4bfc6e1ebe7efeaa8e5e9eb">[email&#160;protected]</span></a></span></div>
       </div>
     </div>
   </div>
@@ -458,9 +481,48 @@
 </section>
 <div class="divider"></div>
 
+<section id="projects">
+  <div class="section-wrap">
+    <div class="section-label">05 — Projects</div>
+    <h2 class="section-title">My <em>Projects</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal anim-up">
+        <div class="project-preview">
+          <iframe src="https://apobuscato.github.io/Sir-Nur-GameDevelopment-/" 
+                  title="Dino Chase Game" 
+                  scrolling="no"
+                  style="width:100%;height:100%;border:none;pointer-events:none;transform:scale(0.8);transform-origin:top left;width:125%;height:125%">
+          </iframe>
+          <div class="project-overlay" onclick="window.open('https://apobuscato.github.io/Sir-Nur-GameDevelopment-/','_blank')">
+            <div class="project-play">▶ Play Game</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tag">🎮 Game Development</div>
+          <div class="project-title">Dino Chase</div>
+          <div class="project-desc">A browser-based game developed as part of Game Development coursework. Control the dinosaur, dodge obstacles, and chase your high score!</div>
+          <div class="project-links">
+            <a href="https://apobuscato.github.io/Sir-Nur-GameDevelopment-/" target="_blank" class="project-btn-primary">🎮 Play Now</a>
+            <a href="https://github.com/apobuscato/Sir-Nur-GameDevelopment-" target="_blank" class="project-btn-ghost">💻 View Code</a>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Game Dev</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
 <section id="awards">
   <div class="section-wrap">
-    <div class="section-label">05 — Awards</div>
+    <div class="section-label">06 — Awards</div>
     <h2 class="section-title">Recognitions &amp; <em>Achievements</em></h2>
     <div class="awards-grid">
       <div class="award-card reveal anim-scale" style="transition-delay:0s"><div class="award-icon">🏆</div><div class="award-title">Innovation and Technical Excellence Award</div><div class="award-desc">Recognized for exceptional technical expertise, innovation, and commitment to ACSCT events and projects for two years. · May 9, 2025</div></div>
@@ -502,7 +564,7 @@
 
 <section id="skills">
   <div class="section-wrap">
-    <div class="section-label">06 — Skills</div>
+    <div class="section-label">07 — Skills</div>
     <h2 class="section-title">Expertise &amp; <em>Abilities</em></h2>
     <div class="skills-two-col">
       <div class="reveal">
@@ -536,11 +598,11 @@
 
 <section id="references">
   <div class="section-wrap">
-    <div class="section-label">07 — References</div>
+    <div class="section-label">08 — References</div>
     <h2 class="section-title">My <em>References</em></h2>
     <div class="ref-grid">
-      <div class="ref-card reveal anim-up"><div class="ref-name">Rey Anne Nidea</div><div class="ref-role">Colleague</div><div class="ref-detail"><span class="rd-label">Phone</span>0912-757-7052</div><div class="ref-detail"><span class="rd-label">Email</span><a href="https://mail.google.com/mail/?view=cm&to=reyannenidea5@gmail.com" target="_blank">reyannenidea5@gmail.com</a></div></div>
-      <div class="ref-card reveal anim-up" style="transition-delay:.1s"><div class="ref-name">Aubrey Shane C. Buscato</div><div class="ref-role">Sister</div><div class="ref-detail"><span class="rd-label">Phone</span>0906-597-7512</div><div class="ref-detail"><span class="rd-label">Email</span><a href="https://mail.google.com/mail/?view=cm&to=aubreyshanecbuscato@gmail.com" target="_blank">aubreyshanecbuscato@gmail.com</a></div></div>
+      <div class="ref-card reveal anim-up"><div class="ref-name">Rey Anne Nidea</div><div class="ref-role">Colleague</div><div class="ref-detail"><span class="rd-label">Phone</span>0912-757-7052</div><div class="ref-detail"><span class="rd-label">Email</span><a href="https://mail.google.com/mail/?view=cm&to=reyannenidea5@gmail.com" target="_blank"><span class="__cf_email__" data-cfemail="eb998e928a85858e85828f8e8adeab8c868a8287c5888486">[email&#160;protected]</span></a></div></div>
+      <div class="ref-card reveal anim-up" style="transition-delay:.1s"><div class="ref-name">Aubrey Shane C. Buscato</div><div class="ref-role">Sister</div><div class="ref-detail"><span class="rd-label">Phone</span>0906-597-7512</div><div class="ref-detail"><span class="rd-label">Email</span><a href="https://mail.google.com/mail/?view=cm&to=aubreyshanecbuscato@gmail.com" target="_blank"><span class="__cf_email__" data-cfemail="4524302737203c362d242b20262730362624312a052228242c296b262a28">[email&#160;protected]</span></a></div></div>
       <div class="ref-card reveal anim-up" style="transition-delay:.2s"><div class="ref-name">Angelo C. Buscato</div><div class="ref-role">Brother</div><div class="ref-detail"><span class="rd-label">Phone</span>0991-912-6819</div></div>
     </div>
   </div>
@@ -549,13 +611,13 @@
 
 <section id="contact">
   <div class="section-wrap">
-    <div class="section-label">08 — Contact</div>
+    <div class="section-label">09 — Contact</div>
     <h2 class="section-title">Get In <em>Touch</em></h2>
     <div class="contact-grid">
       <div class="contact-info reveal">
         <h3>Let's connect and build something great together.</h3>
         <div class="contact-detail"><div class="c-icon">📞</div><div class="c-text"><div class="c-label">Phone</div><div class="c-val">0992-150-2112</div></div></div>
-        <div class="contact-detail"><div class="c-icon">✉️</div><div class="c-text"><div class="c-label">Email</div><div class="c-val"><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank">apocalipsebuscato29@gmail.com</a></div></div></div>
+        <div class="contact-detail"><div class="c-icon">✉️</div><div class="c-text"><div class="c-label">Email</div><div class="c-val"><a href="https://mail.google.com/mail/?view=cm&to=apocalipsebuscato29@gmail.com" target="_blank"><span class="__cf_email__" data-cfemail="b3d2c3dcd0d2dfdac3c0d6d1c6c0d0d2c7dc818af3d4ded2dadf9dd0dcde">[email&#160;protected]</span></a></div></div></div>
         <div class="contact-detail"><div class="c-icon">🌐</div><div class="c-text"><div class="c-label">Facebook</div><div class="c-val"><a href="https://www.facebook.com/profile.php?id=61584889795384" target="_blank">facebook.com/profile.php?id=61584889795384</a></div></div></div>
         <div class="contact-detail"><div class="c-icon">📍</div><div class="c-text"><div class="c-label">Address</div><div class="c-val">Blk 10 Lot 46 Ph. 3, Brgy. Dila<br>Golden City, Sta. Rosa, Laguna 4026</div></div></div>
       </div>
@@ -573,14 +635,13 @@
   <button class="lb-close" onclick="closeLightbox()">&#215;</button>
   <button class="lb-prev" onclick="lbPrev()">&#8592;</button>
   <button class="lb-next" onclick="lbNext()">&#8594;</button>
-  <img id="lbImg" src="" alt="" style="max-width:88vw;max-height:75vh;object-fit:contain;border:1px 
+  <img id="lbImg" src="" alt="" style="max-width:88vw;max-height:75vh;object-fit:contain;border:1px solid rgba(201,168,76,.2);display:block">
   <div style="margin-top:14px;text-align:center;max-width:700px">
     <div id="lbTitle" style="font-family:Georgia,serif;font-size:17px;color:#f0e8d8;margin-bottom:4px"></div>
     <div id="lbIssuer" style="font-size:11px;letter-spacing:2px;color:#c9a84c;text-transform:uppercase"></div>
     <div id="lbCount" style="font-size:10px;color:rgba(200,191,168,.35);margin-top:6px;letter-spacing:2px"></div>
   </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
